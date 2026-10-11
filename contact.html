@@ -35,13 +35,17 @@
 
 <div class="form-wrap">
 <h2>Send a Message</h2>
-<p>Use the order request page for an order inquiry, or use this general contact form once the contact system is connected.</p>
-<form data-placeholder-form>
+<p>Use the order request page for an order inquiry, or send a general message here.</p>
+<form data-email-form data-success-message="Thanks! Your message has been sent to KT Sweets." action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="497c3608-c327-4dd7-bb04-157f64e9da04">
+<input type="hidden" name="subject" value="New KT Sweets Contact Message">
+<input type="hidden" name="from_name" value="KT Sweets Website">
+<input class="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
 <div class="field"><label for="cname">Name</label><input id="cname" name="name" required></div><br>
 <div class="field"><label for="cemail">Email</label><input id="cemail" name="email" type="email" required></div><br>
 <div class="field"><label for="cmessage">Message</label><textarea id="cmessage" name="message" required></textarea></div><br>
 <button class="btn" type="submit">Send Message</button>
-<p class="form-message" hidden></p>
+<p class="form-message" role="status" aria-live="polite" hidden></p>
 </form>
 </div>
 </div></section>

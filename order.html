@@ -34,8 +34,12 @@
 
 <section class="section alt"><div class="container">
 <div class="form-wrap">
-<div class="notice">This is a website-ready placeholder form. Once the business email/contact method is provided, we can connect this form to a submission service or another preferred ordering workflow.</div>
-<form data-placeholder-form>
+<div class="notice">Submitting this form sends an order request to KT Sweets. Your order is not confirmed until details and payment are finalized.</div>
+<form data-email-form data-success-message="Thanks! Your order request has been sent to KT Sweets. We’ll contact you to confirm the details and payment." action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="497c3608-c327-4dd7-bb04-157f64e9da04">
+<input type="hidden" name="subject" value="New KT Sweets Order Request">
+<input type="hidden" name="from_name" value="KT Sweets Website">
+<input class="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
 <div class="form-grid">
 <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Your name"></div>
 <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div>
@@ -46,7 +50,7 @@
 <div class="field full"><label for="payment-method">Preferred payment method</label><select id="payment-method" name="payment_method" required><option value="" selected disabled>Select a payment method</option><option value="Cash App">Cash App</option><option value="Apple Pay">Apple Pay</option><option value="PayPal">PayPal</option><option value="Cash">Cash</option><option value="Check">Check</option></select></div>
 <div class="field full"><label for="theme">Theme / design</label><input id="theme" name="theme" placeholder="Birthday, colors, characters, holiday, etc."></div>
 <div class="field full"><label for="message">Additional details</label><textarea id="message" name="message" placeholder="Tell us anything else about your order..."></textarea></div>
-<div class="field full"><button class="btn" type="submit">Submit Order Request</button><p class="form-message" hidden></p></div>
+<div class="field full"><button class="btn" type="submit">Submit Order Request</button><p class="form-message" role="status" aria-live="polite" hidden></p></div>
 </div>
 </form>
 </div>

@@ -24,7 +24,7 @@ Current menu and contact details include:
 - Instagram: @Ktsweetsok
 - Gallery: 12 optimized cake-pop photos
 
-The order and contact forms are intentionally placeholders because GitHub Pages is static hosting. Connect them to a form service or another backend when the preferred submission method is chosen.
+The order and contact forms submit through Web3Forms and deliver messages to the KT Sweets business email. After publishing, submit one test through each form and confirm delivery.
 
 ## GitHub Pages
 Upload the contents of this folder to a GitHub repository. In the repository settings, enable Pages using the main branch/root folder.

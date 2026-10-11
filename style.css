@@ -392,6 +392,7 @@ header {
 
 .field { display: flex; flex-direction: column; gap: 7px; }
 .field.full { grid-column: 1 / -1; }
+.botcheck { display: none; }
 
 label { font-weight: 800; }
 
@@ -410,6 +411,21 @@ textarea { min-height: 145px; resize: vertical; }
 input:focus, textarea:focus, select:focus {
   outline: 3px solid rgba(232,117,135,.20);
   border-color: var(--pink);
+}
+
+.form-message {
+  margin: 14px 0 0;
+  font-weight: 800;
+}
+
+.form-message[data-status="sending"] { color: var(--brown-soft); }
+.form-message[data-status="success"] { color: #28705f; }
+.form-message[data-status="error"] { color: #a13b4d; }
+
+.btn:disabled {
+  cursor: wait;
+  opacity: .7;
+  transform: none;
 }
 
 .gallery {
